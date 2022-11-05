@@ -30,7 +30,7 @@ const userSchema = new Schema(
         friends: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Friend',
+                ref: 'User',
             },
         ],
     },
@@ -45,7 +45,7 @@ const userSchema = new Schema(
 //Create a virtual property called friendCount that counts the number of friends a user has by 
 // getting the length of the user's friends array field when queried
 userSchema
-    .virtual('getFriends')
+    .virtual('friendCount')
     // Getter
     .get(function () {
     return this.friends.length;
@@ -54,5 +54,5 @@ userSchema
 // Initialize User model
 const User = model('user', userSchema);
 
-
+//Export User model
 module.exports = User;

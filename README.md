@@ -4,13 +4,12 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Walk-through Video](#walkthru-video)
+  * [Walk Through Video](#walk-through-video)
   * [Screen Shots](#screen-shots)
   * [Tests](#tests)
   * [Technologies Used](#technologies-used)  
-  * [Questions](#questions)
-  * [Resources](#resources)
-  * [How to Contribute](#How-to-Contribute)   
+  * [Questions](#questions) 
+  * [How to Contribute](#how-to-contribute)   
   * [License](#license)
   
   ## Description
@@ -101,14 +100,9 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
   |Post| /api/thoughts/:thoughtId/reactions| Create a reaction to a thought|
   |Delete| /api/thoughts/:thoughtId/reactions/reactionId| Remove a reaction from a thought|
 
-
-
-
-
-
   
   
- ## Walk-through Video
+ ## Walk Through Video
 
    Click on the link below to view the walk through video which demonstrates the functionality of the social networking API.
 
@@ -170,7 +164,7 @@ Delete user and associated thought(s)
 
 
   
-  ## Contributing
+  ## How to Contribute
   If you would like to contribute to this project you can contact me by email at dat826@gmail.com or through my GitHub account   @[Beanalini](https://github.com/Beanalini).
   
 

@@ -1,18 +1,20 @@
 const { Schema, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
 
+
 const thoughtSchema = new Schema(
  {
     thoughtText: {
         type: String,
         minLength: 1,
         maxLength: 280,
-    },
-    
+    },    
     createdAt: {
     type: Date,
     default: Date.now,
-    //format timestamp using a getter method
+    get: created => {
+      return created.toDateString();
+      },    
     },
     username: {
     type: String,

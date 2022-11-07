@@ -18,7 +18,9 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      //add a get method for the timestamp
+      get: created => {
+        return created.toDateString();
+        },       
     },
   }, 
   {

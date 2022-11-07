@@ -4,7 +4,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Walk- through Video](#walkthru-video)
+  * [Walk-through Video](#walkthru-video)
   * [Screen Shots](#screen-shots)
   * [Tests](#tests)
   * [Technologies Used](#technologies-used)  
@@ -112,15 +112,43 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
    Click on the link below to view the walk through video which demonstrates the functionality of the social networking API.
 
-   - [walk through video]()
+   - [walk through video](https://watch.screencastify.com/v/tR6l0OqAMlvmxY5iqGwf)
 
    
 
   ## Screen Shots
 
- ![](./assets/images/)
+ Show all users.
 
- 
+ ![All users](./assets/images/get-all-users.png)
+
+Create new user.
+
+ ![Add new user](./assets/images/addnewuser.png)
+
+ Add thought to new user
+
+ ![Add thought to new user](./assets/images/newthought.png)
+
+ Show all users including new user
+
+ ![Show all users](./assets/images/view-all-users.png)
+
+view user by id
+![Get user by id](./assets/images/view-user-by-id.png)
+
+Add a reaction to a thought
+
+![add a reaction to a thought](./assets/images/add-reaction-thought.png)
+
+update thought
+
+![update thought](./assets/images/updatethought.png)
+
+Delete user and associated thought(s)
+
+![Delete user and associated thought(s)](./assets/images/deleteuserbyid.png)
+
 
   ## Tests
   No code tests have been implemented.

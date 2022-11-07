@@ -47,7 +47,7 @@ module.exports = {
 
       //update a single thought by Id
       updateThought(req, res) {
-        console.log(req.params.thoughtId);
+        //console.log(req.params.thoughtId);
         Thought.findOneAndUpdate(
           { _id: req.params.thoughtId },
           { $set: req.body },
@@ -68,12 +68,10 @@ module.exports = {
       deleteThought(req, res) {
        Thought.findOneAndRemove({ _id: req.params.thoughtId })
           .then(thought => {
-            if (!thought) {
-                console.log("point 1");
+            if (!thought) {                
                 return res.status(404).json({ message: 'No thought found with this id!' })   
 
-            }              
-            console.log("point 2");
+            }                
               return User.findOneAndUpdate(
                   { thoughts: req.params.thoughtId },
                   { $pull: { thoughts: req.params.thoughtId } },
@@ -81,21 +79,20 @@ module.exports = {
                 )
             })
           .then((user) => {
-            if (!user) {
-                console.log("point 3");
+            if (!user) {                
                 res.status(404).json({ message: 'Thought found but no user with this id!' });
             }     
-            console.log("point 4");         
+                   
              res.json({ message: 'Thought successfully deleted!' })
             })
             
           .catch((err) => res.status(500).json(err));
-          console.log("point 5");
+          
       },
       //add a reaction to a single thought
       addReaction(req, res) {
-        console.log('You are adding a reaction');
-        console.log(req.body);
+        //console.log('You are adding a reaction');
+        //console.log(req.body);
         Thought.findOneAndUpdate(
           { _id: req.params.thoughtId },
           { $addToSet: { reactions: req.body } },
@@ -113,9 +110,8 @@ module.exports = {
 
       //remove a reaction from a single thought
       deleteReaction(req, res) {
-        console.log( req.params.reactionId);
-        console.log( req.params.thoughtId);
-
+        //console.log( req.params.reactionId);
+        //console.log( req.params.thoughtId);
         Thought.findOneAndUpdate(
           { _id: req.params.thoughtId },
           { $pull: { reactions: {reactionId: req.params.reactionId } } } ,
